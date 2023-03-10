@@ -38,8 +38,8 @@ func GetBookById(Id int64) (*Book, *gorm.DB) {
 	return &getBook, db
 }
 
-func DeleteBook(Id int64) Book {
+func DeleteBook(ID int64) Book {
 	var book Book
-	db.Where("ID=?", Id).Delete(book)
+	db.Where("ID=?", ID).Delete(book)
 	return book
 }

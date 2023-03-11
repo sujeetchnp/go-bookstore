@@ -1,8 +1,9 @@
 package models
 
 import (
-	"github.com/jinzhu/gorm"
+	// "github.com/jinzhu/gorm"
 	"github.com/sujeetchnp/go-bookstore/pkg/config"
+	"gorm.io/gorm" // postgres
 )
 
 var db *gorm.DB
@@ -21,7 +22,7 @@ func init() {
 }
 
 func (b *Book) CreateBook() *Book {
-	db.NewRecord(b)
+	// db.NewRecord(b)
 	db.Create(&b)
 	return b
 }
